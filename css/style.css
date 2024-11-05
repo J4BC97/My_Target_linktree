@@ -1,0 +1,84 @@
+/* Selector que aplica todas las propiedades a los elementos del html 
+ - Selector universal: "*"
+ - Selector tipo: 
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Hace que el ancho y alto de un elemento incluya tambien */
+    font-family: Arial;
+    
+}
+
+body {
+    background: linear-gradient(90deg, rgb(128, 138, 121) 50%, rgba(65, 89, 0) 100%);
+    height: 100vh;
+    display: block;
+    text-align: center;
+    padding-top: 30px;
+
+}
+
+.contenedor {
+    width: 100%;
+    height: auto;
+}
+
+.tarjeta {
+    background-color: rgba(187, 147, 147);
+    width: 320px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+}
+
+.perfil {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Nombre del usuario */
+h1 {
+    color: white;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* Descripcion */
+
+p {
+    color: blanchedalmond;
+    margin-bottom: 20px;
+}
+
+.enlaces a{
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    text-decoration: none;
+    display: block;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.enlaces a:hover {
+    background-color: rgb(75, 61, 61);
+}
+
+.redes a {
+    display: inline-block;
+    margin: 10px 10px;
+    font-size: 24px;
+    color: antiquewhite;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.redes a:hover {
+    transform: scale(1.2);
+}
