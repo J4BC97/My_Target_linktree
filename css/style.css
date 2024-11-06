@@ -138,7 +138,7 @@ details[open] summary::before {
     animation: rotate-emoji 0.6s ease-in-out both;
 }
   
-@-webkit-keyframes rotate-emoji {
+@keyframes rotate-emoji {
     0% {
         -webkit-transform: rotate(0);
         transform: rotate(0);
