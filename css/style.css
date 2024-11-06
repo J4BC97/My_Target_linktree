@@ -38,13 +38,13 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
-div.perfil:hover {
-    opacity: 1;
-}
+
 
 /* Nombre del usuario */
+
 h2 {
     color: white;
     font-size: 24px;
@@ -54,7 +54,7 @@ h2 {
 /* Descripcion */
 
 p {
-    color: blanchedalmond;
+    color: rgb(255, 255, 255);
     margin-bottom: 20px;
 }
 
@@ -89,47 +89,55 @@ p {
 
 /* Diseño de la funcion "details"*/
 
-.contenedor2 {
-    display: inline-block;
-    margin: 15px;
-    background-color: rgb(188, 178, 197);
-    padding: 15px;
-    border-radius: 20px;
-}
-
 details {
-    position: relative;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 1rem;   
+    border-radius: 8px;  
+    border: 1px solid #d8e0e9;
+    color: #ffffff;
+    position: relative;  
 }
 
-details summary {
+details summary {  
     font-weight: 400;
-    list-style: none;
+    font-size: 1.25rem;
+    padding: 1rem;
     cursor: pointer;
-}
-
-details[open] summary {
-    font-weight: 600;
+    list-style: none;
 }
 
 details p {
-    background: rgb(148, 134, 134);
-    border-radius: 5px;
-    margin-top: 15px;
+    padding: 1rem;
+    margin: 0 1rem 1rem 1rem;
 }
 
-details summary::after {
-    position: relative;
-    content: "👇";
-    font-size: 20px;
-    top: auto;
-    right: auto;
+details[open] {
+    background: rgba(255, 255, 255, 0.3);
 }
 
+details:hover, details[open] {
+    box-shadow: 5px 5px 15px #e65c5c;
+}
+  
+details[open] summary {
+    font-weight: 600;
+}
+  
+details summary::before {
+    position: absolute;
+    content: "👇";    
+    font-size: 1.75rem;
+    top: 10px;
+    right: 16px;  
+}
+  
 details[open] summary::before {
-    -webkit-animation: rotate-emoji 0.6s ease-in-out both;
+    -webkit-animation: rotate 0.6s ease-in-out both;
     animation: rotate-emoji 0.6s ease-in-out both;
 }
-
+  
 @-webkit-keyframes rotate-emoji {
     0% {
         -webkit-transform: rotate(0);
@@ -139,4 +147,4 @@ details[open] summary::before {
         -webkit-transform: rotate(180deg);
         transform: rotate(180deg);
     }
-}
+  }
