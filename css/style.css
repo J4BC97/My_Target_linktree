@@ -40,8 +40,12 @@ body {
     border-radius: 50%;
 }
 
+div.perfil:hover {
+    opacity: 1;
+}
+
 /* Nombre del usuario */
-h1 {
+h2 {
     color: white;
     font-size: 24px;
     margin: 10px 0;
@@ -81,4 +85,58 @@ p {
 
 .redes a:hover {
     transform: scale(1.2);
+}
+
+/* Diseño de la funcion "details"*/
+
+.contenedor2 {
+    display: inline-block;
+    margin: 15px;
+    background-color: rgb(188, 178, 197);
+    padding: 15px;
+    border-radius: 20px;
+}
+
+details {
+    position: relative;
+}
+
+details summary {
+    font-weight: 400;
+    list-style: none;
+    cursor: pointer;
+}
+
+details[open] summary {
+    font-weight: 600;
+}
+
+details p {
+    background: rgb(148, 134, 134);
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+details summary::after {
+    position: relative;
+    content: "👇";
+    font-size: 20px;
+    top: auto;
+    right: auto;
+}
+
+details[open] summary::before {
+    -webkit-animation: rotate-emoji 0.6s ease-in-out both;
+    animation: rotate-emoji 0.6s ease-in-out both;
+}
+
+@-webkit-keyframes rotate-emoji {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
 }
