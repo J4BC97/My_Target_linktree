@@ -9,39 +9,47 @@
     padding: 0;
     box-sizing: border-box; /*Hace que el ancho y alto de un elemento incluya tambien */
     font-family: Arial;
-    
 }
 
 body {
     background: linear-gradient(90deg, rgb(128, 138, 121) 50%, rgba(65, 89, 0) 100%);
-    height: 100vh;
     display: block;
     text-align: center;
     padding-top: 30px;
-
+    padding-bottom: 30px;
 }
 
 .contenedor {
     width: 100%;
-    height: auto;
+    height: 150%;
+    background-image: url("/assets/effectparallaxexample.png");
+    background-attachment: fixed; /* Esto es clave para el parallax */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .tarjeta {
     background-color: rgba(187, 147, 147);
-    width: 320px;
-    margin: 0 auto;
+    width: 800px;
+    margin: 30px auto;
     text-align: center;
     padding: 30px;
 }
 
 .perfil {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     cursor: pointer;
+    border: 3px solid #6a6a6a;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease-in-out;
 }
 
-
+.perfil:hover {
+    transform: rotate(360deg);
+}
 
 /* Nombre del usuario */
 
@@ -58,15 +66,18 @@ p {
     margin-bottom: 20px;
 }
 
-.enlaces a{
+.enlaces a {
     background-color: rgba(255, 255, 255, 0.3);
     color: white;
     text-decoration: none;
     display: block;
     border-radius: 8px;
     margin: 10px 0;
+    margin-left: auto;
+    margin-right: auto;
     padding: 6px;
     text-decoration: none;
+    width: 200px;
     transition: background-color 0.3s;
 }
 
@@ -93,7 +104,7 @@ details {
     background-color: rgba(255, 255, 255, 0.3);
     width: 100%;
     margin-top: 20px;
-    margin-bottom: 1rem;   
+    margin-bottom: 20px;   
     border-radius: 8px;  
     border: 1px solid #d8e0e9;
     color: #ffffff;
@@ -147,4 +158,14 @@ details[open] summary::before {
         -webkit-transform: rotate(180deg);
         transform: rotate(180deg);
     }
-  }
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+video {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
